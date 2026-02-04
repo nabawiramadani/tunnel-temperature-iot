@@ -1,0 +1,16 @@
+topic : homeassistant/number/suhu_offset_id32/config
+
+
+payload:
+
+{
+  "name": "Offset Suhu ID 32",
+  "command_topic": "sensor/suhu/offset/id32/set",
+  "state_topic": "sensor/suhu/offset/id32",
+  "unit_of_measurement": "°C",
+  "min": -50,
+  "max": 50,
+  "step": 0.1,
+  "unique_id": "suhu_offset_id32",
+  "mode": "box"
+}

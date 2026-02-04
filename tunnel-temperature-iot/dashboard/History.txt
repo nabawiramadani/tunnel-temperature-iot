@@ -1,0 +1,24 @@
+History:
+
+title: History
+type: history-graph
+entities:
+  - entity: sensor.suhu_id_41
+    name: KOMPOS - 1
+  - entity: sensor.suhu_id_42
+    name: KOMPOS - 2
+  - entity: sensor.suhu_id_43
+    name: KOMPOS - 3
+  - entity: sensor.suhu_id_44
+    name: R.ATAS
+  - entity: sensor.suhu_id_45
+    name: R.BAWAH
+  - entity: sensor.range_max_tunel_d
+  - entity: sensor.range_min_tunel_d
+logarithmic_scale: false
+hours_to_show: 8
+visibility:
+  - condition: user
+    users:
+      - bf1a6b7dd0bb4ba78ca9768747328322
+      - 2adee0d0f8aa4fa8a14e6c4c72ebfe71

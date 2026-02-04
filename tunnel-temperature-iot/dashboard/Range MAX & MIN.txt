@@ -1,0 +1,25 @@
+Range MAX & MIN
+
+MAX:
+{% if is_state('input_boolean.egal_g','on') %}70
+{% elif is_state('input_boolean.pasteur_g','on') %}61
+{% elif is_state('input_boolean.preheat_g','on') %}61
+{% elif is_state('input_boolean.cooling1_g','on') %}53
+{% elif is_state('input_boolean.conditioning1_g','on') %}53
+{% elif is_state('input_boolean.cooling2_g','on') %}53
+{% elif is_state('input_boolean.conditioning2_g','on') %}49
+{% elif is_state('input_boolean.cooling_sp_g','on') %}48
+{% else %}50{% endif %}
+
+
+MIN:
+
+{% if is_state('input_boolean.egal_i','on') %}35
+{% elif is_state('input_boolean.pasteur_i','on') %}54
+{% elif is_state('input_boolean.preheat_i','on') %}54
+{% elif is_state('input_boolean.cooling1_i','on') %}50
+{% elif is_state('input_boolean.conditioning1_i','on') %}47
+{% elif is_state('input_boolean.cooling2_i','on') %}44
+{% elif is_state('input_boolean.conditioning2_i','on') %}44
+{% elif is_state('input_boolean.cooling_sp_i','on') %}44
+{% else %}40{% endif %}

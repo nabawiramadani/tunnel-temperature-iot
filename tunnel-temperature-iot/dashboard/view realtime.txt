@@ -1,0 +1,36 @@
+view realtime :
+
+type: entities
+title: TUNEL I
+show_header_toggle: false
+state_color: false
+entities:
+  - entity: sensor.suhu_id_1
+    name: KOMPOS 1 - i
+    secondary_info: last-updated
+  - entity: number.offset_suhu_id_1
+    name: OFFSET KOMPOS 1 - i
+  - type: divider
+  - entity: sensor.suhu_id_2
+    name: KOMPOS 2 - i
+    secondary_info: last-changed
+  - entity: number.offset_suhu_id_2
+    name: OFFSET KOMPOS 2 - i
+  - type: divider
+  - entity: sensor.suhu_id_3
+    name: KOMPOS 3 - i
+    secondary_info: last-changed
+  - entity: number.offset_suhu_id_3
+    name: OFFSET KOMPOS 3 - i
+  - type: divider
+  - entity: sensor.suhu_id_4
+    name: RUANG ATAS - i
+    secondary_info: last-updated
+  - entity: number.offset_suhu_id_4
+    name: OFFSET RUANG ATAS - i
+  - type: divider
+  - entity: sensor.suhu_id_5
+    name: RUANG BAWAH - i
+    secondary_info: last-updated
+  - entity: number.offset_suhu_id_5
+    name: OFFSET RUANG BAWAH - i

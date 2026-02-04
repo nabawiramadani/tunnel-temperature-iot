@@ -1,0 +1,33 @@
+Phase button:
+
+
+alias: Phase - only one ON D
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - input_boolean.egal_d
+      - input_boolean.preheat_d
+      - input_boolean.pasteur_d
+      - input_boolean.cooling1_d
+      - input_boolean.conditioning1_d
+      - input_boolean.cooling2_d
+      - input_boolean.conditioning_d
+      - input_boolean.cooling_sp_d
+    to: "on"
+actions:
+  - variables:
+      all_phases:
+        - input_boolean.egal_d
+        - input_boolean.preheat_d
+        - input_boolean.pasteur_d
+        - input_boolean.cooling1_d
+        - input_boolean.conditioning1_d
+        - input_boolean.cooling2_d
+        - input_boolean.conditioning_d
+        - input_boolean.cooling_sp_d
+      others: "{{ all_phases | reject('equalto', trigger.entity_id) | list }}"
+  - action: input_boolean.turn_off
+    target:
+      entity_id: "{{ others }}"
+mode: restart
